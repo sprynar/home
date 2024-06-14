@@ -144,3 +144,13 @@ body.dark-mode .dark-mode-toggle {
   color: white;
   background-color:black
 }
+p {
+  margin: 0 0 1rem 0;
+  color: black;
+  transition: color 0.3s ease;
+  max-width: 60ch; /* Limit line length to approximately 80 characters */
+  line-height: 1.6; /* Improve readability with increased line height */
+}
+body.dark-mode p {
+  color: white;
+}
