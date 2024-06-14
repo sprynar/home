@@ -154,6 +154,7 @@ body.dark-mode p {
   color: white;
 }
 .odkaz{
+  cursor: pointer;
   display: inline-flex;
   padding: 0.5rem 0.5rem;
   border-radius: 2rem;
@@ -166,5 +167,6 @@ body.dark-mode .odkaz {
   color: black;
 }
 .odkaz:hover {
+  cursor: pointer;
   background-color: darkgray;
 }
