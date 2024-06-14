@@ -10,6 +10,14 @@
     <title>Whoops...</title>
 </head>
 <body>
+<button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="gg-dark-mode"></i></button>
+<div class="container">
   <h1>Whoops...</h1>
     <center><a href="https://sprynar.github.io/"><button>Get me out of here</button></a></center>
+</div>
+<script>
+  document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
 </body>
