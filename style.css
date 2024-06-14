@@ -68,28 +68,41 @@ body.dark-mode iframe {
   border-color: white;
 }
 
-.download-button {
+/* General button styling */
+button, .download-button {
   display: inline-flex;
   padding: 0.5rem 0.5rem;
   padding-right: 0rem;
   border-radius: 2rem;
   background-color: black;
   color: white;
+  text-decoration: none; /* Added to ensure links and buttons are consistent */
   transition: background-color 0.3s ease, color 0.3s ease;
+  border: none; /* Remove default button border */
+  cursor: pointer;
 }
 
-body.dark-mode .download-button {
+/* Button icon styling */
+button i, .download-button i {
+  margin-right: 0.5rem;
+}
+
+/* Hover state */
+button:hover, .download-button:hover {
+  background-color: darkgray;
+}
+
+/* Dark mode specific button styling */
+body.dark-mode button, body.dark-mode .download-button {
   background-color: white;
   color: black;
 }
 
-.download-button i {
-  margin-right: 0.5rem;
+/* Dark mode specific button hover state */
+body.dark-mode button:hover, body.dark-mode .download-button:hover {
+  background-color: lightgray;
 }
 
-.download-button:hover {
-  background-color: darkgray;
-}
 
 a {
   text-decoration: none;
