@@ -157,6 +157,7 @@ body.dark-mode p {
   cursor: pointer;
   display: inline-flex;
   padding: 0.5rem 0.5rem;
+  border: solid 2px white;
   border-radius: 2rem;
   background-color: black;
   color: white;
@@ -165,6 +166,7 @@ body.dark-mode p {
 body.dark-mode .odkaz {
   background-color: white;
   color: black;
+  border: solid 2px black;
 }
 .odkaz:hover {
   cursor: pointer;
