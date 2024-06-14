@@ -9,6 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
 .container {
@@ -19,11 +25,23 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: white;
+  border-color: white;
 }
 
 h1, h2, p, a, iframe {
   margin: 0 0 1rem 0;
   color: black;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode p, body.dark-mode a, body.dark-mode iframe {
+  color: white;
 }
 
 h1 {
@@ -43,15 +61,26 @@ iframe {
   border-radius: 2rem;
   border: solid 2px black;
   height: 400px;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-mode iframe {
+  border-color: white;
 }
 
 .download-button {
-	display: inline-flex;
-	padding: 0.5rem 0.5rem;
-	padding-right: 0rem;
-	border-radius: 2rem;
-	background-color: black;
-	color: white;
+  display: inline-flex;
+  padding: 0.5rem 0.5rem;
+  padding-right: 0rem;
+  border-radius: 2rem;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .download-button {
+  background-color: white;
+  color: black;
 }
 
 .download-button i {
@@ -66,11 +95,20 @@ a {
   text-decoration: none;
   color: #1e88e5; /* Material Blue color */
   border-bottom: 1px dashed #1e88e5;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
   background-color: rgba(30, 136, 229, 0.2); /* Highlight with Material Blue */
+}
+
+body.dark-mode a {
+  color: #90caf9; /* Light Blue color for dark mode */
+  border-bottom: 1px dashed #90caf9;
+}
+
+body.dark-mode a:hover {
+  background-color: rgba(144, 202, 249, 0.2); /* Light Blue highlight for dark mode */
 }
 
 blockquote {
@@ -80,4 +118,11 @@ blockquote {
   border-left: 5px solid black;
   border-radius: 2rem;
   font-style: italic;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode blockquote {
+  background-color: #333;
+  border-color: white;
+  color: white;
 }
