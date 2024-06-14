@@ -51,14 +51,10 @@ iframe {
 	border-radius: 2rem;
 	background-color: black;
 	color: white;
-  position: relative; /* Added for positioning */
 }
 
 .download-button i {
   margin-right: 0.5rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .download-button:hover {
