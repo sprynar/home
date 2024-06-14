@@ -130,8 +130,9 @@ body.dark-mode blockquote {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background: none;
+  background-color: white;
   border: solid 2px;
+  border-radius:2rem;
   padding: 2rem;
   cursor: pointer;
   font-size: 24px;
@@ -141,4 +142,5 @@ body.dark-mode blockquote {
 
 body.dark-mode .dark-mode-toggle {
   color: white;
+  background-color:black
 }
