@@ -47,7 +47,7 @@ iframe {
 
 .download-button {
 	display: inline-flex;
-	padding: 0.5rem 0.5rem;
+	padding: 1rem 1rem;
 	border-radius: 2rem;
 	background-color: black;
 	color: white;
