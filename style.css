@@ -1,28 +1,14 @@
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('https://cdn.jsdelivr.net/gh/JulietaUla/ubuntu-fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('https://cdn.jsdelivr.net/gh/JulietaUla/ubuntu-fonts/ubuntu/Ubuntu-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 body {
   margin: 0;
   padding: 0;
   background-color: lightgray;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-
 .container {
   background-color: white;
   padding: 2rem;
