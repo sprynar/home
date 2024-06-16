@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
-  <meta charset="UTF-8" />
-  <title>hello</title>
+  <title>Hello</title>
 </head>
-
 <body>
-<button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="gg-dark-mode"></i></button>
-<div class="container">
-<h1>Welcome to my personal website!<br></h1>
+  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="gg-dark-mode"></i></button>
+  <div class="container">
+    <h1>Welcome to my personal website!<br></h1>
     <h2>Me</h2>
     <ul>
       <li>Languages: Czech (mother tongue), English, basic conversation in Japanese and German</li>
@@ -20,9 +18,9 @@
       <li>Experience: 10+ year Windows user, 4+ Years using of GNU/Linux, Microsoft Office, Kdenlive</li>
       <li>Interests: Emulation, Reverse engineering, FOSS</li>
     </ul>
-  <h2>My work</h2>
-  <p>I'm a part of <str>Revel8ion</str>  <button onclick="window.location.href='https://sprynar.github.io/revel8ion.html'" class="odkaz" style="display:inline-flex;">Check us out!</button></p>
-  <p><str>Projects:</str></p>
+    <h2>My work</h2>
+    <p>I'm a part of <str>Revel8ion</str> <button onclick="window.location.href='https://sprynar.github.io/revel8ion.html'" class="odkaz" style="display:inline-flex;">Check us out!</button></p>
+    <p><str>Projects:</str></p>
     <ul>
       <li>AV2D - GameJam project</li>
       <li>AVKD - concept program for cattle feeding (not public)</li>
@@ -30,16 +28,50 @@
       <li>VOŠ a SOŠ Březnice website - <a href="http://sbrez.bozen.cz/"> in development</a></li>
       <li>Tsukihon - in development</li>
     </ul>
-  <h2>Reach out to me</h2>
-      <ul>
-        <li><a href="https://github.com/sprynar/">Github</a></li>
-        <li><a href="https://steamcommunity.com/id/sprynar/">Steam</a></li>    
-      </ul>
-</div>
-<script>
-  document.getElementById('darkModeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
+    <h2>Reach out to me</h2>
+    <ul>
+      <li><a href="https://github.com/sprynar/">Github</a></li>
+      <li><a href="https://steamcommunity.com/id/sprynar/">Steam</a></li>    
+    </ul>
+  </div>
+  <script>
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(cname) == 0) {
+          return c.substring(cname.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function checkDarkModeCookie() {
+      const darkMode = getCookie("darkMode");
+      if (darkMode == "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    }
+
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const darkMode = document.body.classList.contains('dark-mode') ? "enabled" : "disabled";
+      setCookie("darkMode", darkMode, 365);
+    });
+
+    checkDarkModeCookie();
+  </script>
 </body>
 </html>
