@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
-  <title>Hello</title>
+  <title>welcome</title>
 </head>
 <body>
   <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="gg-dark-mode"></i></button>
   <div class="container">
-    <h1>Welcome to my personal website!<br></h1>
+    <h1>Petr Špryňar<br>Welcome to my personal website!<br></h1>
     <h2>Me</h2>
     <ul>
       <li>Languages: Czech (mother tongue), English, basic conversation in Japanese and German</li>
@@ -65,13 +65,15 @@
       }
     }
 
-    document.getElementById('darkModeToggle').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const darkMode = document.body.classList.contains('dark-mode') ? "enabled" : "disabled";
-      setCookie("darkMode", darkMode, 365);
+    document.addEventListener('DOMContentLoaded', () => {
+      checkDarkModeCookie();
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const darkMode = document.body.classList.contains('dark-mode') ? "enabled" : "disabled";
+        setCookie("darkMode", darkMode, 30);
+      });
     });
-
-    checkDarkModeCookie();
   </script>
 </body>
 </html>
