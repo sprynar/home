@@ -173,3 +173,25 @@ body.dark-mode .odkaz {
   cursor: pointer;
   background-color: darkgray;
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+  overflow: hidden;
+  margin-top: 10px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dark-mode video {
+  outline: none;
+  border: none;
+}
