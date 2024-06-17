@@ -1,10 +1,14 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('font.woff') format('woff'), /* Modern Browsers */
-         url('font.ttf')  format('truetype'); /* Safari, Android, iOS */
+    src: url('font.eot'); /* IE9 Compat Modes */
+    src: url('font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('font.woff2') format('woff2'), /* Super Modern Browsers */
+         url('font.woff') format('woff'), /* Modern Browsers */
+         url('font.ttf') format('truetype'); /* Safari, Android, iOS */
     font-weight: normal;
     font-style: normal;
 }
+
 
 /* Now include the existing CSS code with adjustments for using Oswald */
 body {
