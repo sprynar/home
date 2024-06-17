@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="src/style.css">
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/software-download.css' rel='stylesheet'>
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
-  <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
   <title>Revel8ion</title>
 </head>
 <body>
@@ -34,19 +32,10 @@
       <p>Download AV2D: <a href="/AV2D_Demo.7z" class="download-button"><i class="gg-software-download"></i></a></p>
       <p>Watch the full game playthrough by <a href="https://www.youtube.com/@navivan9112">Navivan</a>:</p>
       <div class="video-container">
-        <video id="player" playsinline controls>
-          <source src="src/av2d.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
+        <video id="video" controls preload="none"><source src="src/av2d.webm" type="video/webm">Your browser does not support the video tag.</video>
       </div>
     </div>
   </div>
-  <script>
-    const player = new Plyr('#player', {
-      controls: ['play-large', 'play', 'progress', 'current-time', 'fullscreen'],
-      settings: ['speed'],
-    });
-  </script>
   <script>
     function setCookie(name, value, days) {
       const d = new Date();
