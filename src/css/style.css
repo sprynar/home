@@ -212,3 +212,6 @@ body.dark-mode .video-container {
   justify-content: center;
   align-items: center;
 }
+.no-underline a {
+    border-bottom: 0px;
+}
