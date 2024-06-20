@@ -207,3 +207,8 @@ body.dark-mode .odkaz {
 body.dark-mode .video-container {
   border: solid 2px white;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
