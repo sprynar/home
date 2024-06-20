@@ -112,13 +112,6 @@ a {
   border-bottom: 1px dashed #0d47a1;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.download-button a {
-  margin: 0 0 0 0;
-  text-decoration: none;
-  color: #197bd1; /* Material Dark Blue color for dark mode */
-  border-bottom: 0px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 a:hover {
   background-color: rgba(13, 71, 161, 0.2); /* Dark Blue highlight */
 }
