@@ -47,8 +47,13 @@ body.dark-mode .container {
   border-color: white;
 }
 
-h1, h2, p, a, iframe {
+h1, h2, p, iframe {
   margin: 0 0 1rem 0;
+  color: black;
+  transition: color 0.3s ease;
+}
+a {
+  margin: 0 0 0 0;
   color: black;
   transition: color 0.3s ease;
 }
