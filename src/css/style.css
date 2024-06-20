@@ -89,6 +89,7 @@ body.dark-mode iframe {
   background-color: black;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 0px;
 }
 
 body.dark-mode .download-button {
@@ -211,7 +212,4 @@ body.dark-mode .video-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.no-underline a {
-    border-bottom: 0px;
 }
