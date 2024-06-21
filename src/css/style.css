@@ -82,7 +82,7 @@ body.dark-mode iframe {
 }
 
 .download-button {
-  display: inline-flex;
+  display: inline-block;
   padding: 0.5rem 0.5rem;
   padding-right: 0rem;
   border-radius: 2rem;
